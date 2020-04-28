@@ -145,8 +145,7 @@
         </div>
         <div class="welcome_text">
             <p>
-                Du bist nun im Museum und mit anderen Besucher*innen über einen
-                Audiochat verbunden.
+                Du bist nun im Museum. Viel Spass beim Durchklicken und Verweilen!
             </p>
 
         </div>
