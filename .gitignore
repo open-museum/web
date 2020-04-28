@@ -1,3 +1,9 @@
+/node_modules/
+/src/node_modules/@sapper/
+yarn-error.log
+/cypress/screenshots/
+/__sapper__/
+
 # Created by https://www.gitignore.io/api/git,linux,macos,dotenv,windows,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=git,linux,macos,dotenv,windows,visualstudiocode
 

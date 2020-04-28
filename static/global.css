@@ -1,0 +1,24 @@
+/* fonts */
+
+
+/* Define the font size so that it is responsive and would not become
+too small or big for respectively narrow or wide screens */
+
+html {
+    font-size: 1.9vw;
+}
+
+
+/* define font type */
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+
+@media only screen and (orientation:portrait){
+  body {
+    height: 100vw;
+    transform: rotate(90deg);
+  }
+}
