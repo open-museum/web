@@ -134,6 +134,11 @@
 
 <svelte:head>
     <title>Du bist nun verbunden</title>
+    <meta
+        name="description"
+        content="Das open-museum ist ein unabhängiges digitales Museum und ist
+        im Rahmen des Versus Virus Hackathon innerhalb von 48 Stunden
+        entstanden." />
 </svelte:head>
 <div class="grid-container-welcome">
     <div class="content_welcome">
@@ -145,7 +150,8 @@
         </div>
         <div class="welcome_text">
             <p>
-                Du bist nun im Museum. Viel Spass beim Durchklicken und Verweilen!
+                Du bist nun im Museum. Viel Spass beim Durchklicken und
+                Verweilen!
             </p>
 
         </div>
