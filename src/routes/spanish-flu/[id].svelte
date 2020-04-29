@@ -513,6 +513,15 @@
     {:else}
         <title>open-museum</title>
     {/if}
+    {#if room.text}
+        <meta name="description" content={room.text} />
+    {:else}
+        <meta
+            name="description"
+            content="Das open-museum ist ein unabhängiges digitales Museum und
+            ist im Rahmen des Versus Virus Hackathon innerhalb von 48 Stunden
+            entstanden." />
+    {/if}
 </svelte:head>
 {#if showAbout}
     <ModalText on:close={() => (showAbout = false)} />

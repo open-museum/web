@@ -121,6 +121,11 @@
 
 <svelte:head>
     <title>Etwas ist schief gelaufen</title>
+    <meta
+        name="description"
+        content="Das open-museum ist ein unabhängiges digitales Museum und ist
+        im Rahmen des Versus Virus Hackathon innerhalb von 48 Stunden
+        entstanden." />
 </svelte:head>
 <div class="grid-container-welcome">
     <div class="content_welcome">
