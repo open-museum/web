@@ -508,7 +508,11 @@
 </style>
 
 <svelte:head>
-    <title>{room.title}</title>
+    {#if room.title}
+        <title>{room.title}</title>
+    {:else}
+        <title>open-museum</title>
+    {/if}
 </svelte:head>
 {#if showAbout}
     <ModalText on:close={() => (showAbout = false)} />
