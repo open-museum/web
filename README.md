@@ -18,8 +18,16 @@ docker run -d -p 2095:8188 openmuseum/janus-gateway:latest
 
 ## Usage
 
+To run a development server
+
 ```bash
 npm run dev
+```
+
+To run a production server
+
+```bash
+docker run -d -p 80:5000 openmuseum/web:latest
 ```
 
 ## Support
