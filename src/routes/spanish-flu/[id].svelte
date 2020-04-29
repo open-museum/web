@@ -81,7 +81,6 @@
     }
 
     .rights_font {
-        font-family: "Open Sans", serif;
         font-size: 0.7rem;
         font-style: italic;
         color: #001400;

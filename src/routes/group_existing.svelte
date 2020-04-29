@@ -118,7 +118,7 @@
         text-align: center;
         text-decoration: none;
         color: #001400;
-        font-weight: 600;
+        font-weight: 700;
         margin-top: 5%;
     }
 
