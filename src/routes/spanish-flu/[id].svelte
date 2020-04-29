@@ -376,11 +376,6 @@
         opacity: 0.7;
     }
 
-    .image_landscape img {
-        object-fit: cover;
-        width: 100%;
-    }
-
     /* classes for content_mix*/
 
     .image1 {
@@ -393,12 +388,6 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
-    }
-
-    .image1 img {
-        object-fit: cover;
-        width: 100%;
-        height: auto;
     }
 
     .image1:hover {
@@ -416,11 +405,6 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
-    }
-
-    .image2 img {
-        object-fit: cover;
-        width: 100%;
     }
 
     .image2:hover {
@@ -502,18 +486,6 @@
         margin-right: 10%;
     }
 
-    .hand {
-        position: relative;
-        align-self: flex-start;
-        width: 25%;
-        height: 80%;
-        align-items: center;
-    }
-
-    .hand img {
-        width: 100%;
-    }
-
     .button1 {
         position: relative;
         border: 3px solid #ff00ff;
@@ -521,19 +493,6 @@
         border-radius: 10%;
         width: 25%;
         height: 20%;
-    }
-
-    .hands {
-        position: relative;
-        width: 25%;
-        height: 80%;
-        align-items: center;
-        left: 75%;
-        bottom: 104%;
-    }
-
-    .hands img {
-        width: 100%;
     }
 
     .button2 {
