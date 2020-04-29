@@ -28,6 +28,10 @@ module.exports = {
 						}
 					}
 				},
+				{
+					test: /\.css$/,
+					use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
+				},
 				// janus.js does not use 'export' to provide its functionality to others, instead
 				// it creates a global variable called 'Janus' and expects consumers to use it.
 				// Let's use 'exports-loader' to simulate it uses 'export'.
