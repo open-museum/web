@@ -76,7 +76,7 @@
         color: #ff00ff;
         padding: 5px 5px;
         font-size: 1.8rem;
-        font-weight: bold;
+        font-weight: 700;
         background-color: transparent;
         border: none;
     }
