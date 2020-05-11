@@ -133,7 +133,7 @@
             <a class="button_size" href="/group_new" style="font-size: 0.7rem;">
                 Gruppe
                 <br />
-                Erstellen
+                erstellen
             </a>
             <a
                 rel="prefetch"
