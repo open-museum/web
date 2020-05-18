@@ -30,6 +30,8 @@ To run a production server
 docker run -d -p 80:5000 openmuseum/web:latest
 ```
 
+If you want analytics you need to set up [matomo](https://matomo.org/) and replace the script in `src/template.html`.
+
 ## Support
 
 This project is maintained by [@open-museum](https://github.com/open-museum). Please understand that we won't be able to provide individual support via email. We also believe that help is much more valuable if it's shared publicly, so that more people can benefit from it.
