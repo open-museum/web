@@ -30,7 +30,7 @@ To run a production server
 docker run -d -p 80:5000 openmuseum/web:latest
 ```
 
-If you want analytics you need to set up [matomo](https://matomo.org/) and replace the script in `src/template.html`.
+If you want analytics you need to set up [matomo](https://matomo.org/) and change the parameters `url` and `siteId` in `src/routes/_layout.svelte` accordingly.
 
 ## Support
 
