@@ -15,6 +15,7 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
+    "@dexlib/svelte-matomo": "^0.1.4",
     "compression": "^1.7.1",
     "janus-gateway": "git://github.com/meetecho/janus-gateway.git#v0.9.3",
     "normalize.css": "^8.0.1",
