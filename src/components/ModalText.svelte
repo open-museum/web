@@ -132,6 +132,13 @@
     </small>
     <br />
 
+    <small>
+        Gefällt das open-museum? Wir nehmen
+        <a href="https://spenden.open-museum.ch/" target="_blank">Spenden</a>
+        entgegen.
+    </small>
+    <br />
+
     <small>Konzept: Moritz Mähr, Maja Škrkić, Selina Stuber</small>
     <br />
     <small>Kuration und Redaktion: Maja Škrkić, Selina Stuber</small>
@@ -154,9 +161,7 @@
 
     <h4>Impressum / Urheberrechte</h4>
 
-    <small>IG open-museum.ch</small>
-    <br />
-    <small>c/o Maja Škrkić</small>
+    <small>Verein open-museum.ch</small>
     <br />
     <small>Stauffacherstrasse 98</small>
     <br />
