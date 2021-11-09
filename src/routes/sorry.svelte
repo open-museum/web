@@ -1,7 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import { stores } from "@sapper/app";
-    const { page } = stores();
+    import { page } from "$app/stores";
     let error = "";
     onMount(async () => {
         if ($page.query.error) {

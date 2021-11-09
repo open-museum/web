@@ -1,6 +1,5 @@
 <script>
-    import { stores } from "@sapper/app";
-    const { page } = stores();
+    import { page } from "$app/stores";
     let group;
     $: if ($page.query.group) {
         group = parseInt($page.query.group);

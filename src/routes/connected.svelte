@@ -9,8 +9,7 @@
         getAudio
     } from "./../components/AudioChat.svelte";
     import { onMount } from "svelte";
-    import { stores } from "@sapper/app";
-    const { page } = stores();
+    import { page } from "$app/stores";
     onMount(async () => {
         if ($page.query.group) {
             let group = parseInt($page.query.group);

@@ -91,7 +91,7 @@
 <script>
     import { onMount } from "svelte";
     import { Janus } from "janus-gateway";
-    import { goto } from "@sapper/app";
+    import { goto } from "$app/navigation";
 
     onMount(async () => {
         await Janus.init({
