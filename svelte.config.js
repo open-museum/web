@@ -14,7 +14,23 @@ const config = {
 				host: 'HOST',
 				port: 'PORT'
 			}
-		})
+		}),
+		vite: {
+			esbuild: {
+				plugins: [
+					{
+						name: 'export-janus-gateway-js',
+						setup(build) {
+							build.onLoad({ filter: /janus-gateway/ }, async (args) => {
+								let contents = await require('fs').promises.readFile(args.path, 'utf8');
+								contents += 'export {Janus}';
+								return { contents };
+							});
+						}
+					}
+				]
+			}
+		}
 	}
 };
 

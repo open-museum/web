@@ -90,6 +90,7 @@
 
 <script>
     import { onMount } from "svelte";
+    // https://vitejs.dev/guide/build.html#customizing-the-build
     import { Janus } from "janus-gateway";
     import { goto } from "$app/navigation";
 
