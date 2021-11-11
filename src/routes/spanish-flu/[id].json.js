@@ -1,7 +1,7 @@
 import rooms from './_rooms.js';
 
 const lookup = new Map();
-rooms.forEach(room => {
+rooms.forEach((room) => {
 	lookup.set(room.id, JSON.stringify(room));
 });
 
@@ -21,8 +21,10 @@ export function get(req, res, next) {
 			'Content-Type': 'application/json'
 		});
 
-		res.end(JSON.stringify({
-			message: `Not found`
-		}));
+		res.end(
+			JSON.stringify({
+				message: `Not found`
+			})
+		);
 	}
 }

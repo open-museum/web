@@ -1,27 +1,27 @@
 {
-  "name": "web",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "preview": "svelte-kit preview",
-    "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
-  },
-  "devDependencies": {
-    "@dexlib/svelte-matomo": "^0.1.4",
-    "@sveltejs/adapter-node": "^1.0.0-next.55",
-    "@sveltejs/adapter-static": "^1.0.0-next.21",
-    "@sveltejs/kit": "next",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-svelte3": "^3.2.1",
-    "prettier": "^2.4.1",
-    "prettier-plugin-svelte": "^2.4.0",
-    "svelte": "^3.42.6"
-  },
-  "type": "module",
-  "dependencies": {
-    "janus-gateway": "git://github.com/meetecho/janus-gateway.git#v0.11.5"
-  }
+	"name": "web",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"preview": "svelte-kit preview",
+		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. . !{CODE_OF_CONDUCT.md,LICENSE.md,_layouts/default.html}"
+	},
+	"devDependencies": {
+		"@dexlib/svelte-matomo": "^0.1.4",
+		"@sveltejs/adapter-node": "^1.0.0-next.55",
+		"@sveltejs/adapter-static": "^1.0.0-next.21",
+		"@sveltejs/kit": "next",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-svelte3": "^3.2.1",
+		"prettier": "^2.4.1",
+		"prettier-plugin-svelte": "^2.4.0",
+		"svelte": "^3.44.1"
+	},
+	"type": "module",
+	"dependencies": {
+		"janus-gateway": "github:meetecho/janus-gateway"
+	}
 }

@@ -36,11 +36,11 @@ If you want analytics you need to set up [matomo](https://matomo.org/) and chang
 
 This project is maintained by [@open-museum](https://github.com/open-museum). Please understand that we won't be able to provide individual support via email. We also believe that help is much more valuable if it's shared publicly, so that more people can benefit from it.
 
-| Type                   | Platforms                                                    |
-| ---------------------- | ------------------------------------------------------------ |
-| 🚨 **Bug Reports**      | [GitHub Issue Tracker](https://github.com/open-museum/web/issues) |
-| 🎁 **Feature Requests** | [GitHub Issue Tracker](https://github.com/open-museum/web/issues) |
-| 🛡 **Report a security vulnerability**      | [GitHub Issue Tracker](https://github.com/open-museum/web/issues) |
+| Type                                  | Platforms                                                         |
+| ------------------------------------- | ----------------------------------------------------------------- |
+| 🚨 **Bug Reports**                    | [GitHub Issue Tracker](https://github.com/open-museum/web/issues) |
+| 🎁 **Feature Requests**               | [GitHub Issue Tracker](https://github.com/open-museum/web/issues) |
+| 🛡 **Report a security vulnerability** | [GitHub Issue Tracker](https://github.com/open-museum/web/issues) |
 
 ## Roadmap
 
