@@ -23,7 +23,9 @@
 	import { onMount } from 'svelte';
 	import { setMute, getMuted, getJoined, joinGroup } from './../../components/AudioChat.svelte';
 
-	let muted = false;
+
+	// FIXME let muted = false;
+	const muted = true;
 
 	onMount(async () => {
 		let joined = await getJoined();
