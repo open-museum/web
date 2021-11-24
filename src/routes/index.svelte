@@ -23,12 +23,11 @@
 				ausgewählte Inhalte zur Spanischen Grippe. Tausche dich über dein Mikrofon mit anderen
 				Besucher*innen aus. In der Ausstellung kannst du das Mikrofon jederzeit stumm stellen -->
 				Falls du dich verlaufen hast, hilft dir der Übersichtsplan weiter. Aufgrund der hohen Kosten
-				für den Betrieb und die Wartung der interaktiven Komponenten sind der Audio und das Game nicht
-				mehr verfügbar.
+				für den Betrieb und die Wartung der interaktiven Komponenten ist der Audio Chat nicht mehr verfügbar.
 			</p>
 		</div>
 		<div class="button_box">
-			<a rel="prefetch" class="button_size" href="/spanish-flu/7"> Los geht's! </a>
+			<a rel="prefetch" class="button_size" href="/spanish-flu/7">Los geht's!</a>
 		</div>
 		<!-- <div class="button_box">
 			<img src="/images/icons/0_1.svg" class="button_icon" alt="" />
