@@ -1,21 +1,25 @@
 <script context="module">
-	export async function preload({ params, query }) {
-		// the `id` parameter is available because
-		// this file is called [id].svelte
-		const res = await this.fetch(`spanish-flu/${params.id}.json`);
-		const data = await res.json();
-
-		if (res.status === 200) {
+	/**
+	 * @type {import('@sveltejs/kit').Load}
+	 */
+	export async function load({ page, fetch }) {
+		const room = await fetch(`${page.path}.json`).then((res) => res.json());
+		if (!room) {
 			return {
-				room: data
+				status: 404,
+				error: new Error('Room could not be found')
 			};
-		} else {
-			this.error(res.status, data.message);
 		}
+		return {
+			props: {
+				room
+			}
+		};
 	}
 </script>
 
 <script>
+	import { base, assets } from '$app/paths';
 	import { onMount } from 'svelte';
 	import { setMute, getMuted, getJoined, joinGroup } from './../../components/AudioChat.svelte';
 
@@ -64,77 +68,86 @@
 {#if showAbout}
 	<ModalText on:close={() => (showAbout = false)} />
 {:else if showImage1}
-	<Modal on:close={() => (showImage1 = false)} background="/images/objects/{room.image1}.jpg" />
+	<Modal
+		on:close={() => (showImage1 = false)}
+		background="{base}/images/objects/{room.image1}.jpg"
+	/>
 {:else if showImage2}
-	<Modal on:close={() => (showImage2 = false)} background="/images/objects/{room.image2}.jpg" />
+	<Modal
+		on:close={() => (showImage2 = false)}
+		background="{base}/images/objects/{room.image2}.jpg"
+	/>
 {:else if showImageLandscape}
 	<Modal
 		on:close={() => (showImageLandscape = false)}
-		background="/images/objects/{room.image_landscape}.jpg"
+		background="{base}/images/objects/{room.image_landscape}.jpg"
 	/>
 {:else if showMap}
-	<Modal on:close={() => (showMap = false)} background="/images/floormap.png" />
+	<Modal on:close={() => (showMap = false)} background="{base}/images/floormap.png" />
 {:else}
 	<div
 		class="grid-container"
-		style="background-image: url(/images/{room.background});background-repeat:
+		style="background-image: url({base}/images/{room.background});background-repeat:
         no-repeat;background-size:cover;"
 	>
 		{#if room.up}
 			<div class="up big">
-				<a rel="prefetch" href="/spanish-flu/{room.up}">
-					<img class="up_img" src="/images/icons/{room.up}.svg" alt="" />
+				<a rel="prefetch" href="{base}/spanish-flu/{room.up}">
+					<img class="up_img" src="{base}/images/icons/{room.up}.svg" alt="" />
 				</a>
 			</div>
 			<div class="up_background" />
 		{/if}
 		{#if room.down}
 			<div class="down big">
-				<a rel="prefetch" href="/spanish-flu/{room.down}">
-					<img class="down_img" src="/images/icons/{room.down}.svg" alt="" />
+				<a rel="prefetch" href="{base}/spanish-flu/{room.down}">
+					<img class="down_img" src="{base}/images/icons/{room.down}.svg" alt="" />
 				</a>
 			</div>
 			<div class="down_background" />
 		{/if}
 		{#if room.left}
 			<div class="left big">
-				<a rel="prefetch" href="/spanish-flu/{room.left}">
-					<img class="left_img" src="/images/icons/{room.left}.svg" alt="" />
+				<a rel="prefetch" href="{base}/spanish-flu/{room.left}">
+					<img class="left_img" src="{base}/images/icons/{room.left}.svg" alt="" />
 				</a>
 			</div>
 			<div class="left_background" />
 		{/if}
 		{#if room.right}
 			<div class="right big">
-				<a rel="prefetch" href="/spanish-flu/{room.right}">
-					<img class="right_img" src="/images/icons/{room.right}.svg" alt="" />
+				<a rel="prefetch" href="{base}/spanish-flu/{room.right}">
+					<img class="right_img" src="{base}/images/icons/{room.right}.svg" alt="" />
 				</a>
 			</div>
 			<div class="right_background" />
 		{/if}
 		<div class="mute big">
 			{#if muted}
-				<img id="toggleaudio" src="images/unmute.svg" alt="" on:click={toggleMute} />
+				<img id="toggleaudio" src="{base}/images/unmute.svg" alt="" on:click={toggleMute} />
 			{:else}
-				<img id="toggleaudio" src="images/mute.svg" alt="" on:click={toggleMute} />
+				<img id="toggleaudio" src="{base}/images/mute.svg" alt="" on:click={toggleMute} />
 			{/if}
 		</div>
 		<div class="map big">
-			<img src="images/map.svg" alt="" on:click={() => (showMap = true)} />
+			<img src="{base}/images/map.svg" alt="" on:click={() => (showMap = true)} />
 		</div>
 		<div class="about big">
-			<img class="about" src="images/logo.svg" alt="" on:click={() => (showAbout = true)} />
+			<img class="about" src="{base}/images/logo.svg" alt="" on:click={() => (showAbout = true)} />
 		</div>
 		<div class={room.layout}>
 			<!-- Icon-->
 			{#if room.icon}
 				<div
 					class="icon_background"
-					style="background-image:url(/images/icons/{room.icon}.svg),
-                    url(/images/icon_background.svg); background-size: 40%,80%;"
+					style="background-image:url({base}/images/icons/{room.icon}.svg),
+                    url({base}/images/icon_background.svg); background-size: 40%,80%;"
 				/>
 			{:else}
-				<div class="icon_background" style="background-image:url(/images/icon_background.svg);" />
+				<div
+					class="icon_background"
+					style="background-image:url({base}/images/icon_background.svg);"
+				/>
 			{/if}
 			<!-- Titel-->
 			{#if room.title}
@@ -145,7 +158,7 @@
 			{#if room.image1}
 				<div
 					class="image1 responsive"
-					style="background-image: url(/images/objects/{room.image1}.jpg);background-repeat:
+					style="background-image: url({base}/images/objects/{room.image1}.jpg);background-repeat:
                     no-repeat;background-size:cover;background-position:center;"
 					on:click={() => (showImage1 = true)}
 				/>
@@ -153,7 +166,7 @@
 			{#if room.image2}
 				<div
 					class="image2 responsive"
-					style="background-image: url(/images/objects/{room.image2}.jpg);background-repeat:
+					style="background-image: url({base}/images/objects/{room.image2}.jpg);background-repeat:
                     no-repeat;background-size:cover;background-position:center;"
 					on:click={() => (showImage2 = true)}
 				/>
@@ -178,7 +191,7 @@
 			{#if room.image_landscape}
 				<div
 					class="image_landscape responsive"
-					style="background-image: url(/images/objects/{room.image_landscape}.jpg);background-repeat:
+					style="background-image: url({base}/images/objects/{room.image_landscape}.jpg);background-repeat:
                     no-repeat;background-size:cover;background-position:center;"
 					on:click={() => (showImageLandscape = true)}
 				/>
@@ -280,7 +293,7 @@
 	.up_background {
 		grid-area: up;
 		width: 100%;
-		background-image: url(/images/navi_up.svg);
+		background-image: url({base}/images/navi_up.svg);
 		background-size: 40%;
 		background-repeat: no-repeat;
 		background-position: top center;
@@ -302,7 +315,7 @@
 	.down_background {
 		grid-area: down;
 		width: 100%;
-		background-image: url(/images/navi_down.svg);
+		background-image: url({base}/images/navi_down.svg);
 		background-size: 40%;
 		background-repeat: no-repeat;
 		background-position: bottom center;
@@ -324,7 +337,7 @@
 	.left_background {
 		grid-area: left;
 		width: 100%;
-		background-image: url(/images/navi_left.svg);
+		background-image: url({base}/images/navi_left.svg);
 		background-size: 60%;
 		background-repeat: no-repeat;
 		background-position: left center;
@@ -347,7 +360,7 @@
 	.right_background {
 		grid-area: right;
 		width: 100%;
-		background-image: url(/images/navi_right.svg);
+		background-image: url({base}/images/navi_right.svg);
 		background-size: 60%;
 		background-repeat: no-repeat;
 		background-position: right center;
@@ -399,7 +412,7 @@
 		grid-area: icon;
 		width: 100%;
 		height: 100%;
-		/* background-image: url(/images/icon_background.svg); */
+		/* background-image: url({base}/images/icon_background.svg); */
 		/* background-size: 80%; */
 		background-repeat: no-repeat;
 		background-position: center;

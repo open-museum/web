@@ -89,7 +89,8 @@
 	import { onMount } from 'svelte';
 	// https://vitejs.dev/guide/build.html#customizing-the-build
 	// import * as Janus from './janus.es';
-	import * as Janus from '../../node_modules/janus-gateway/html/janus';
+	// import '../../node_modules/janus-gateway/html/janus';
+	import * as Janus from './janus.es.js';
 	import { goto } from '$app/navigation';
 
 	onMount(async () => {

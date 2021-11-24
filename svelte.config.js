@@ -1,36 +1,12 @@
 /** @type {import('@sveltejs/kit').Config} */
 
-import adapter from '@sveltejs/adapter-node';
+import adapter from '@sveltejs/adapter-static';
 
 const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
-		adapter: adapter({
-			// default options are shown
-			out: 'build',
-			precompress: false,
-			env: {
-				host: 'HOST',
-				port: 'PORT'
-			}
-		}),
-		vite: {
-			esbuild: {
-				plugins: [
-					{
-						name: 'export-janus-gateway-js',
-						setup(build) {
-							build.onLoad({ filter: /janus-gateway/ }, async (args) => {
-								let contents = await require('fs').promises.readFile(args.path, 'utf8');
-								contents += 'export {Janus}';
-								return { contents };
-							});
-						}
-					}
-				]
-			}
-		}
+		adapter: adapter({})
 	}
 };
 
