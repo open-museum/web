@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:16
 
 COPY package*.json ./
 
@@ -6,8 +6,8 @@ RUN npm install
 
 COPY . .
 
-RUN npm run export
+RUN npm run build
 
-EXPOSE 5000
+EXPOSE 3000
 
-CMD npx serve __sapper__/export
+CMD npm exec svelte-kit preview --host
