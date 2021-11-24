@@ -18,18 +18,24 @@
 		</div>
 		<div class="welcome_text">
 			<p>
-				Stöbere im open-museum wie in einem echten Museum: Entdecke allein oder als Gruppe
+				Stöbere im open-museum wie in einem echten Museum.
+				<!-- : Entdecke allein oder als Gruppe
 				ausgewählte Inhalte zur Spanischen Grippe. Tausche dich über dein Mikrofon mit anderen
-				Besucher*innen aus. In der Ausstellung kannst du das Mikrofon jederzeit stumm stellen. Falls
-				du dich verlaufen hast, hilft dir der Übersichtsplan weiter.
+				Besucher*innen aus. In der Ausstellung kannst du das Mikrofon jederzeit stumm stellen -->
+				Falls du dich verlaufen hast, hilft dir der Übersichtsplan weiter. Aufgrund der hohen Kosten
+				für den Betrieb und die Wartung der interaktiven Komponenten sind der Audio und das Game nicht
+				mehr verfügbar.
 			</p>
 		</div>
 		<div class="button_box">
+			<a rel="prefetch" class="button_size" href="/spanish-flu/7"> Los geht's! </a>
+		</div>
+		<!-- <div class="button_box">
 			<img src="/images/icons/0_1.svg" class="button_icon" alt="" />
 			<a rel="prefetch" class="button_size" href="/connected">Einzel</a>
 			<img src="/images/icons/0_2.svg" class="button_icon" alt="" />
 			<a rel="prefetch" href="/group_select" class="button_size"> Gruppe </a>
-		</div>
+		</div> -->
 	</div>
 </div>
 
