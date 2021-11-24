@@ -201,7 +201,7 @@
 			{/if}
 			{#if room.id == 33}
 				<div class="minigame">
-					<embed src="https://minigame.open-museum.ch" />
+					<embed src="https://openmuseum-minigame.herokuapp.com" />
 				</div>
 			{/if}
 		</div>
