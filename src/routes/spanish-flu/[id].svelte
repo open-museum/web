@@ -25,7 +25,7 @@
 
 
 	// FIXME let muted = false;
-	const muted = true;
+	let muted = true;
 
 	onMount(async () => {
 		let joined = await getJoined();
@@ -35,7 +35,7 @@
 	});
 
 	async function toggleMute() {
-		muted = !muted;
+		// FIXME muted = !muted;
 		await setMute(muted);
 	}
 
